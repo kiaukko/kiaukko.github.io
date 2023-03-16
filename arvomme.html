@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(52, 10, 10);
+
+            color: rgb(201, 183, 189);
+            font-family: "Gill Sans";
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .toppic {
+
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        #rcorners1 {
+            align-self: center;
+            justify-self: center;
+            border-radius: 25px;
+            background: rgba(52, 10, 10, 0.7);
+            max-width: 1500px;
+            padding: 25px 100px 25px 100px;
+        }
+
+        .rcorners2 {
+            align-self: center;
+            justify-self: center;
+            border-radius: 25px;
+            background: rgb(106, 72, 76);
+            max-width: 1500px;
+            padding: 55px 6% 55px 6%;
+        }
+
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: rgb(30, 5, 5);
+            padding: 15px;
+
+            width: 100%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 10px;
+            align-items: center;
+        }
+
+        .flex-container-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #alapalkkivasen {
+            font-size: 16px;
+        }
+
+        .alapalkkioikea {
+            font-size: 20px;
+            margin-left: auto;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        #contactus {
+            color: inherit;
+        }
+
+        #contactus:link {
+            text-decoration: underline;
+        }
+
+
+        .topnav {
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            align-items: center;
+            padding-bottom: 0px;
+            margin-top: 33px;
+            overflow: hidden;
+            background-color: rgb(52, 10, 10);
+            opacity: 80%;
+        }
+
+        .topnav a {
+            float: left;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f2f2f2;
+
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: rgb(201, 183, 189);
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #yrlogo:hover {
+            background-color: rgb(52, 10, 10);
+        }
+        
+
+        .topnav a.active {
+            font-size: 24px;
+            background-color: rgb(52, 10, 10);
+            color: rgb(255, 255, 224);
+        }
+    
+
+        #otsikko {
+            margin-top: -80px;
+            font-size: 30px;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (min-width: 1100px) {
+            .topnav {
+                display: flex;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+                align-self: center;
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            @media screen and (max-width: 1000px) {
+                .flex-container-row {
+                    flex-direction: column;
+                }
+
+                .flex-container-row>div {
+                    padding-bottom: 50px;
+                }
+
+                .grid-container {
+                    grid-template-columns: 1fr;
+                    margin-left: 15%;
+                    margin-right: 15%;
+                }
+
+            }
+
+            @media screen and (max-width: 752px) {
+                #otsikko {
+                    margin-top: -110px;
+                }
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                align-self: center;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="grid-item" id="yrlogo"><img src="logo.png" width="126"></a>
+        <a href="index.html">TIETOA MEISTÄ</a>
+        <a href="ateriapalvelu.html">ATERIAPALVELU</a>
+        <a href="yrityksille.html">YRITYKSILLE</a>
+        <a href="arvomme.html" class="active">ARVOMME</a>
+        <a href="kuvia.html">KUVIA</a>
+        <a href="yhteydenotto.html">YHTEYDENOTTO</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="flex-container">
+        <div>
+            <img src="kuvat/mustikka-1@2x.png" class="toppic">
+            <p id="otsikko">...</p>
+        </div>
+        <div class="flex-container" style="gap:50px; padding:120px 5%;">
+            <div class="rcorners2">
+                <h1 style="padding-bottom: 20px;">Asiakas</h1>
+                <div class="grid-container" style="padding: 0; grid-gap: 30px;">
+                    <img src="kuvat/asiakaskuva@2x.png" style="width: 80%">
+                    <p>Toimintamme tavoitteena on tyytyväinen asiakas.
+                        Haluamme kohdata asiakkaan ateriatoimitusten yhteydessä, ja näin samalla varmistua, että kaikki on hyvin. Vaihdamme muutaman sanan, muistaen kumminkin vielä aterioitaan odottavat asiakkaat. Kuuntelemme enemmän kuin mielellämme ruokatoiveita ja pyrimme niitä mahdollisuuksien rajoissa toteuttamaan. Meille on tärkeää, että ruoasta tulee hyvä mieli ja kylläinen olo.</p>
+                </div>
+            </div>
+            <div class="rcorners2">
+                <h1 style="padding-bottom: 20px;" >Ateria</h1>
+                <div class="grid-container" style="padding: 0; grid-gap: 30px;">
+                    <img src="kuvat/freshmushroomchampignon1638945-1@2x.png" width="80%">
+                    <p>Toinen tärkeä asia meille on puhtaat ja laadukkaat raaka-aineet. Käytämme mahdollisimman paljon kotimaisia ja paikallisia raaka-aineita. Haluamme tarjota asiakkaalle hyvä hinta-laatusuhteisia aterioita.</p>
+                </div>
+            </div>
+            <div class="rcorners2">
+                <h1 style="padding-bottom: 20px;">Astia</h1>
+                <div class="grid-container" style="padding: 0; grid-gap: 30px;">
+                    <img src="kuvat/box-1@2x.png" width="80%">
+                    <p>Haluamme jättää jälkipolvillemme mahdollisimman puhtaan luonnon. Tästä syystä pyrimme välttämään mahdollisimman paljon luontoa kuormittavia kuten muovisia pakkauksia.
+                        <br /><br />
+                        Lounasrasiamme ovat kartonkia. Keittoastiana käytämme biohajoavasta kartongista valmistettua kulhoa, jossa on niin ikään biohajoava kansi (CPLA).
+                        Edellä mainituissa pakkauksissa ruoan voi lämmittää myös turvallisesti ja vaivattomasti mikroaaltouunissa.
+                        Salaatti- ja jälkiruoka-astiallemme olemme yrittäneet löytää kartonkista vaihtoehtoa, mutta käytössä testaamamme pakkaukset eivät ole ikävä kyllä vakuuttaneet meitä toimivuudellaan. Tästä syystä pakkaamme salaatit ja jälkiruoat toistaiseksi vielä muoviseen rasiaan. 
+                        Tarkempia tietoja ja kierrätysohjeet toimitamme asiakkaalle asiakassuhteen alkaessa, sekä pyydettäessä tai muutoksien yhteydessä.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <footer>
+                <div class="flex-container-row">
+                    <div>
+                        <p id="alapalkkivasen">© 2023 Lounasapu, kaikki oikeudet pidätetään</p>
+                    </div>
+                    <div>
+                        <div style="display: grid; align-items: center; padding-right: 40px;" class="alapalkkioikea">
+                            <div style="grid-column: 1;">Seuraa meitä:</div>
+                            <div style="grid-column: 2;"><a href="https://www.facebook.com/lounasapu"
+                                    target="_blank"><img src="Facebook-logo.png" height="50"></a></div>
+                            <div style="grid-column: 3"><a href="https://www.instagram.com/lounasapu/?hl=fi"
+                                    target="_blank"><img src="instagram-logo.png" height="50"></a></div>
+                        </div>
+                    </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
