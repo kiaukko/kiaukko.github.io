@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Lounasapu - ateriapalvelu</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
       background-color: rgb(52, 10, 10);
 
       color: rgb(201, 183, 189);
-      font-family: "Gill Sans";
+      font-family: Georgia, serif;
       font-size: 22px;
       text-align: center;
     }
@@ -141,6 +141,10 @@
       color: rgb(255, 255, 224);
     }
 
+    #otsikko {
+            margin-top: -80px; font-size: 30px; padding-right: 5%; padding-left: 5%;
+        }
+
     .topnav .icon {
       display: none;
     }
@@ -179,6 +183,12 @@
           grid-template-columns: 1fr;
         }
       }
+      @media screen and (max-width: 752px) {
+                #otsikko {
+                    margin-top: -110px;
+                }
+            }
+
 
       .topnav.responsive .icon {
         position: absolute;
@@ -215,7 +225,7 @@
   <div class="flex-container">
     <div>
       <img src="kuvat/backgroundpicture@2x.png" class="toppic">
-      <p style="margin-top: -80px; font-size: 30px;"> Ateriat kotiin silloin, kun sinä haluat</p>
+      <p id="otsikko"> Ateriat kotiin silloin, kun sinä haluat</p>
     </div>
     <div style="padding:50px 9%;  align-self: center; justify-self: center; min-height: 490px">
       <div class="grid-container" style="gap: 120px; text-align: left; padding-top: 50px;" >
