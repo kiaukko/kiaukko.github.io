@@ -104,6 +104,8 @@
 
   
     .topnav {
+
+      width: 100%;
       align-items: center;
       padding-bottom: 0px;
       margin-top: 33px;
@@ -183,6 +185,24 @@
       }
 
     }
+
+    @media screen and (max-width: 1000px) {
+                .flex-container-row {
+                    flex-direction: column;
+                }
+
+                .flex-container-row>div {
+                    padding-bottom: 50px;
+                }
+
+                .grid-container {
+                    grid-template-columns: 1fr;
+                    margin-left: 15%;
+                    margin-right: 15%;
+                    justify-items: center
+                }
+
+            }
   </style>
 </head>
 
@@ -204,7 +224,7 @@
         </a>
       </div>
     </div>
-    <div style="padding: 6% 15% 4.5%; align-self: center; justify-self: center; min-height: 490px"> 
+    <div style="padding: 6% 5% 4.5%; align-self: center; justify-self: center; min-height: 490px; margin: auto;"> 
       <p id="rcorners1">Lounasapu on valkeakoskelainen ateriapalveluita tuottava yritys, joka on perustettu vuonna 2017. Lounasapu tarjoaa monipuolisen makumatkan aina lapsuudesta nykyaikaan, asiakasta kuunnellen ja toiveita toteuttaen.<br /><br />
 
         Lounasapu toimittaa myös erilaisia kokous- ja palaveritarjottavia.
